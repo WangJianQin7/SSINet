@@ -14,10 +14,10 @@ argument = parser.add_argument('--testsize', type=int, default=352, help='testin
 args = parser.parse_args()
 opt = args
 
-dataset_path = './dataset/'
+dataset_path = './datasets/'
 
 model = SSINet()
-model.load_state_dict(torch.load('./models/SSINet/SSINet_EORSSD.pth.51'))
+model.load_state_dict(torch.load('./models/SSINet/SSINet_EORSSD.pth'))
 
 model.cuda()
 model.eval()

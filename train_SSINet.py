@@ -32,9 +32,9 @@ model.cuda()
 params = model.parameters()
 optimizer = torch.optim.Adam(params, opt.lr)
 
-image_root = './dataset/' + opt.trainset + '/train-images/'
-gt_root = './dataset/' + opt.trainset + '/train-labels/'
-edge_root = './dataset/' + opt.trainset + '/edge-labels/'
+image_root = './datasets/' + opt.trainset + '/train-images/'
+gt_root = './datasets/' + opt.trainset + '/train-labels/'
+edge_root = './datasets/' + opt.trainset + '/edge-labels/'
 
 train_loader = get_loader(image_root, gt_root, edge_root, batchsize=opt.batchsize, trainsize=opt.trainsize)
 total_step = len(train_loader)
